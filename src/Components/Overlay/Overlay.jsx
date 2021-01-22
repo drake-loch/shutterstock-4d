@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Overlay.scss';
+import SearchBar from '../SearchBar/SearchBar';
 
 export class Overlay extends Component {
     state = {
@@ -16,11 +17,17 @@ export class Overlay extends Component {
         console.log(`Menu is ${this.state.open ? 'open' : 'closed'}`);
     }
 
+    renderSugWindow = () =>{
+        return(
+            <SearchBar />
+        );
+    }
+
     render() {
         return (
             <div className="overlay">
                 <div onClick={this.openMenu} className="overlay-bttn"></div>
-                {this.state.open && <div className="menu"></div>}
+                {this.state.open && this.renderSugWindow}
             </div>
         )
     }

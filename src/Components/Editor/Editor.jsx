@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import './Editor.scss'
 import notif from '../../assets/notif.svg'
 
+import SearchBar from '../SearchBar/SearchBar';
+import Toggle from '../Toggle/Toggle';
+
 export class Editor extends Component {
     state = {
         open: false
@@ -30,7 +33,7 @@ export class Editor extends Component {
                     <div onClick={this.openMenu} className="overlay-bttn">
                         <img src={notif} alt="" className="notif-icon"/>
                     </div>
-                    {this.state.open && <div className="menu"></div>}
+                    {this.state.open && <div className="menu"><SearchBar /><Toggle /></div>}
                 </div>
             </div>
         )
