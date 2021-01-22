@@ -7,6 +7,9 @@ sstk.setAccessToken('v2/cjZDeHo4VlliR05WTlIzb2U3MWh1UUd3S01rZVlTUW8vMjkyMTk1OTk5
 const api = new sstk.ImagesApi();
 
 
+import SearchBar from '../SearchBar/SearchBar';
+import Toggle from '../Toggle/Toggle';
+
 export class Editor extends Component {
     state = {
         open: false,
@@ -64,6 +67,7 @@ export class Editor extends Component {
                     <div onClick={this.openMenu} className="overlay-bttn">
                         <img src={notif} alt="" className="notif-icon"/>
                     </div>
+                    {this.state.open && <div className="menu"><SearchBar /><Toggle /></div>}
                     {this.state.open && <div className="menu">
                         {this.state.recs.map(i => <img className='rec' src={i}/>)}    
                     </div>}
