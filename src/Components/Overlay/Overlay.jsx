@@ -7,6 +7,7 @@ export class Overlay extends Component {
 
     }
 
+
     openMenu = () =>{
         console.log("Menu has opened");
     }
