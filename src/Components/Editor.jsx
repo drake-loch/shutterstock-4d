@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+const sstk = require('shutterstock-api');
 
 export default class Editor extends Component {
     componentDidMount(){

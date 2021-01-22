@@ -1,3 +1,39 @@
+
 .overlay{
     display: flex;
+#editor{
+    height: 90vh;
 }
+
+.rec {
+    display: inline-block;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.menu {
+    width: 280px;
+    height: 588px;
+    background-color: white;
+    position: absolute;
+    top: 16.5%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    left: 6.75%;
+    border-radius: 8px;
+    box-shadow: 3px 4px 10px 1px rgba(0,0,0,0.17);
+}
+
+.overlay-bttn{
+        position: absolute;
+        z-index: 1;
+        top: 70%;
+        left: 2%;
+        width: 60px;
+        height: 60px;
+        background-color: #33363E;
+        border-radius: 100%;

@@ -1,7 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import Editor from './Components/Editor/Editor'
-
 import Overlay from './Components/Overlay/Overlay';
 
 const sstk = require('shutterstock-api');
