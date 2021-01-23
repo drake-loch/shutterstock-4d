@@ -2,11 +2,22 @@
     height: 90vh;
 }
 
+.title {
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
 .rec {
     display: inline-block;
     object-fit: cover;
     width: 100px;
     height: 100px;
+    margin: 10px;
+    border-radius: 2px;
+}
+
+.controls {
+    width: 100%;
 }
 
 .menu {
@@ -23,6 +34,7 @@
     left: 6.75%;
     border-radius: 8px;
     box-shadow: 3px 4px 10px 1px rgba(0,0,0,0.17);
+    padding: 10px
 }
 
 .overlay-bttn{

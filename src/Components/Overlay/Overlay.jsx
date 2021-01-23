@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './Overlay.scss';
+import SearchBar from '../SearchBar/SearchBar'
+import Toggle from '../Toggle/Toggle'
 
 export class Overlay extends Component {
     state = {
@@ -19,7 +21,10 @@ export class Overlay extends Component {
         return (
             <div className="overlay">
                 <div onClick={this.openMenu} className="overlay-bttn"></div>
-                {this.state.open && <div className="menu"></div>}
+                {this.state.open && <div className="menu">
+                    <SearchBar />
+                    <Toggle /> 
+                </div>}
             </div>
         )
     }

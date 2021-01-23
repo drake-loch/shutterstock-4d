@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import './Editor.scss'
 import notif from '../../assets/notif.svg'
+import SearchBar from '../SearchBar/SearchBar'
+import Toggle from '../Toggle/Toggle'
 require('dotenv').config()
 const sstk = require('shutterstock-api');
 sstk.setAccessToken('v2/cjZDeHo4VlliR05WTlIzb2U3MWh1UUd3S01rZVlTUW8vMjkyMTk1OTk5L2N1c3RvbWVyLzMvUVRQdmVUclpFN3ZnTnNxY2JLSVFBM2M2VGh2Ym8yN3E4VlBsZ0FLZzVxZmJqOWhfNGF3NUUyNUhXdUdSa1lWS0ZOSGQxVWFOU1NicWpPLTlkd0V0dGhEVjJZSkFMMWxvcThnLUdTdU83eXhpY2FmMFRWVTN4d2JRLWwzbWMtNGM4MkNYbmZvdFctSVM5MGlzOU56VFJQY0JyVjEzeklBN0g5MGV4WEZQZHBmYzZtSHRud2E0R0VDSjYtcndwOWVpWVVBckJqZnZtT1hOb0M4UlhMcXZPZw');
 const api = new sstk.ImagesApi();
+
 
 
 export class Editor extends Component {
@@ -27,7 +30,8 @@ export class Editor extends Component {
           }).launch()
 
           const queryParams = {
-            "query": "hiking",
+            "query": "concert",
+            "query": "music",
             "image_type": "photo",
             "orientation": "vertical",
             "people_number": 3
@@ -65,7 +69,12 @@ export class Editor extends Component {
                         <img src={notif} alt="" className="notif-icon"/>
                     </div>
                     {this.state.open && <div className="menu">
-                        {this.state.recs.map(i => <img className='rec' src={i}/>)}    
+                        <div className='controls'>
+                            <h3 className="title">Reccommendations</h3>
+                            <SearchBar />
+                            <Toggle />
+                        </div>    
+                        {this.state.recs.map(i => <a href='http://www.google.com' target='blank'><img className='rec' src={i}/></a>)}
                     </div>}
                     <div className="faker"></div>
                 </div>

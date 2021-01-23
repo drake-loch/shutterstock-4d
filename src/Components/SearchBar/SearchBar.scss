@@ -1,0 +1,13 @@
+.search{
+    margin: 0 auto;
+    margin-top: 1vh;
+    width: 80%;
+    &__form{
+        border-top: 2px solid rgb(219, 219, 219);
+        &__input{
+            width: 100%;
+            height: 4vh;
+            margin: 10px 0;
+        }
+    }
+}
